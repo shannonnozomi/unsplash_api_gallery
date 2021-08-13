@@ -14,15 +14,19 @@ function makeRequestToUnsplash(requestUrl) {
 function createImage(imageObj){
     const imageDiv = document.createElement("div");
     const image = document.createElement("img");
+    const favoriteIcon = document.createElement("favicon")
+    favoriteIcon.innerHTML ="<button class='heart heartFull'><span onclick='mybutton()' class= 'iconify' data-icon='dashicons:heart' data-inline='false'></span></button>"
     image.src = imageObj.urls.regular;
     image.alt = imageObj.alt_description;
     image.style.margin = "20px";
-    image.style.width ="500px";
+    image.style.width ="400px";
     image.style.height = "auto";
-    image.style.border = "double 4px black"
+    image.style.border = "double 4px black";
     imageDiv.append(image);
     divForImg.append(imageDiv);
-}
+    imageDiv.append(favoriteIcon);
+};
+
 
 function myFunction() {
     document.getElementById("img-box").innerHTML = "";
@@ -40,7 +44,7 @@ document.getElementById("frm1").addEventListener("keyup", function(e){
        myFunction();
     }
 });
-    
-    
-    
 
+function mybutton() {
+    alert("hi");
+};
