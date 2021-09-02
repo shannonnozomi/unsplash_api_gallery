@@ -1,5 +1,5 @@
 const divForImg = document.getElementById('img-box');
-
+const favDivForImg = document.getElementById("favoritesDiv");
 
 function makeRequestToUnsplash(requestUrl) {
     fetch(requestUrl)
@@ -11,11 +11,29 @@ function makeRequestToUnsplash(requestUrl) {
             });
         });
 }
+
+
+var favImagesArray =[];
+
+function favorited(imageId, favoriteIcon) {
+favoriteIcon.classList.toggle("heartActive");
+if (favImagesArray.includes(imageId)) {
+    const index = favImagesArray.indexOf(imageId)
+    if (index > -1) {favImagesArray.splice(index,1)}
+}
+else {
+    favImagesArray.push(imageId);
+}
+console.log(favImagesArray);
+}
+
+
 function createImage(imageObj){
     const imageDiv = document.createElement("div");
     const image = document.createElement("img");
-    const favoriteIcon = document.createElement("favicon")
-    favoriteIcon.innerHTML ="<button class='heart heartFull'><span onclick='mybutton()' class= 'iconify' data-icon='dashicons:heart' data-inline='false'></span></button>"
+    const favoriteIcon = document.createElement("button");
+    favoriteIcon.innerHTML ="<span class='heart heartFull iconify' data-icon='dashicons:heart' data-inline='false'></span>"
+    favoriteIcon.onclick = function(){favorited(imageObj.urls.full, favoriteIcon.firstChild)};
     image.src = imageObj.urls.regular;
     image.alt = imageObj.alt_description;
     image.style.margin = "20px";
@@ -45,6 +63,9 @@ document.getElementById("frm1").addEventListener("keyup", function(e){
     }
 });
 
-function mybutton() {
-    alert("hi");
-};
+function favoritePage() {localStorage.setItem("images", JSON.stringify(favImagesArray))};
+
+
+
+
+document.getElementById("favLink").addEventListener("click", favoritePage);
