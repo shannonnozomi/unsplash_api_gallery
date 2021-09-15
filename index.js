@@ -12,11 +12,11 @@ function makeRequestToUnsplash(requestUrl) {
         });
 }
 
-
-var favImagesArray =[];
+var favImagesArray = JSON.parse(localStorage.getItem('images')) || [];
 
 function favorited(imageId, favoriteIcon) {
 favoriteIcon.classList.toggle("heartActive");
+
 if (favImagesArray.includes(imageId)) {
     const index = favImagesArray.indexOf(imageId)
     if (index > -1) {favImagesArray.splice(index,1)}
@@ -26,7 +26,6 @@ else {
 }
 console.log(favImagesArray);
 }
-
 
 function createImage(imageObj){
     const imageDiv = document.createElement("div");
@@ -65,7 +64,5 @@ document.getElementById("frm1").addEventListener("keyup", function(e){
 
 function favoritePage() {localStorage.setItem("images", JSON.stringify(favImagesArray))};
 
-
-
-
 document.getElementById("favLink").addEventListener("click", favoritePage);
+

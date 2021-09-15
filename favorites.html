@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Favorites</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="favorites.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -13,10 +13,12 @@
     <header>
         <ul>
         <li><a href="index.html" class="button"><span class="favLink">Search Gallery</a></span></li>
+        <li><a id= "clearButton" class="button"><span class="favLink">Clear Favorites</a></span></li>
         </ul>
         <h1>Favorites</h1>
     </header>
-    <div id="favoritesDiv">
+    <div id="message">You have no favorited images. Click on the &nbsp; <i class= 'iconify' data-icon='dashicons:heart' data-inline='false'></i> &nbsp; to favorite some images.</div>
+    <div id="favoritesDiv">  
     </div>
     <footer>
         <p id="footer-text"><span style="text-decoration: underline;">Designed & Developed by :</span> Shannon Nicholas</p>
