@@ -1,131 +1,134 @@
-*{
-    box-sizing: border-box;
-} 
-body, html{
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    text-align: center;
+* {
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    color: gray;
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  text-align: center;
 }
-form{
-    text-align: center;
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: gray;
 }
-header, footer{
-    margin: 0;
-    padding: 0;
-    height: 300px;
-    width: auto;
-    padding: 20px 10px;
-    background-color: rgba(114, 179, 124, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
+form {
+  text-align: center;
 }
-h1{
-    text-align: center;
-    font-size: 40px;
+header,
+footer {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  width: auto;
+  padding: 20px 10px;
+  background-color: rgba(114, 179, 124, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
-#img-box, #favoritesDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0px;
-    width: 100%;
-    margin: 10px;
+h1 {
+  text-align: center;
+  font-size: 40px;
 }
-#footer-text{
-    text-align: center;
-    font-size: 25px;
+#img-box,
+#favoritesDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  width: 100%;
+  margin: 10px;
+}
+#footer-text {
+  text-align: center;
+  font-size: 25px;
 }
 #submit {
-    background-color: rgba(114, 179, 124);
-    border: none;
-    color: white;
-    padding: 15px 30px; 
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    border-radius: 6px;
+  background-color: rgba(114, 179, 124);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 6px;
 }
 #submit:hover {
-    background-color: rgb(90, 141, 97);
-    cursor: pointer;
+  background-color: rgb(90, 141, 97);
+  cursor: pointer;
 }
 #myInput {
-    width: 180px;
+  width: 180px;
 }
 .heart:hover {
- color: rgb(248, 114, 136);
- cursor: pointer;
+  color: rgb(248, 114, 136);
+  cursor: pointer;
 }
-.heart{
-    color: gray;
-    font-size: 25px;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    border: none;
-    background: none;
+.heart {
+  color: gray;
+  font-size: 25px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background: none;
 }
-.heartActive{
-    color: rgb(240, 68, 96);
-    cursor: pointer;
-    font-size: 25px;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    border: none;
-    background: none;
-   }
-button{
-    background-color: none;
-    font-size: 25px;
-    position: absolute;
-    border: none;
-    background: none;
+.heartActive {
+  color: rgb(240, 68, 96);
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background: none;
 }
-div{
-    position: relative;
+button {
+  background-color: none;
+  font-size: 25px;
+  position: absolute;
+  border: none;
+  background: none;
+}
+div {
+  position: relative;
 }
 a.button {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
 }
-a.button:hover{
-    cursor: pointer;
+a.button:hover {
+  cursor: pointer;
 }
-.link{
-    display: flex;
-    padding: 14px;
-    border-radius: 10px;
-    border-style: solid;
-    border: 0.5px solid white;
+.link {
+  display: flex;
+  padding: 14px;
+  border-radius: 10px;
+  border-style: solid;
+  border: 0.5px solid white;
 }
-.link:hover{  
-    background-color: rgba(114, 179, 124);
-    cursor: pointer;
+.link:hover {
+  background-color: rgba(114, 179, 124);
+  cursor: pointer;
 }
 .mystyle {
-    color: rgb(248, 114, 136);
+  color: rgb(248, 114, 136);
 }
 #message {
-    padding: 50px 0 30px;
-    font-size: 22px;
+  padding: 50px 0 30px;
+  font-size: 22px;
 }
-span{
-    display: flex;
-    justify-content: flex-end;
-    margin: 10px 30px;
+span {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 30px;
 }
