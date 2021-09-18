@@ -44,7 +44,6 @@ function createImage(imageObj){
     imageDiv.append(favoriteIcon);
 };
 
-
 function myFunction() {
     document.getElementById("img-box").innerHTML = "";
     var inputVal = document.getElementById("myInput").value;
@@ -64,5 +63,5 @@ document.getElementById("frm1").addEventListener("keyup", function(e){
 
 function favoritePage() {localStorage.setItem("images", JSON.stringify(favImagesArray))};
 
-document.getElementById("favLink").addEventListener("click", favoritePage);
+document.getElementById("favs").addEventListener("click", favoritePage);
 

@@ -40,6 +40,7 @@ if (favImagesArray.includes(newImage)) {
     if (index > -1) {favImagesArray.splice(index,1)}
 }
 };
+
 parsedImages.forEach((newImage)=>{
     createFavImage(newImage);
 });
@@ -59,3 +60,6 @@ function clearFunction(){
     timeFunction();
     localStorage.clear();}
 };
+
+function favoritePage() {localStorage.setItem("images", JSON.stringify(favImagesArray))};
+document.getElementById("home").addEventListener("click", favoritePage);
